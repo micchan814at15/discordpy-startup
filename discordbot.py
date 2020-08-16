@@ -1,9 +1,3 @@
-import random
-from datetime import time
-import client
-import discord
-from discord import message
-from discord.ext.commands import Bot
 from discord.ext import commands
 import os
 import traceback
