@@ -204,4 +204,4 @@ async def ping(ctx):
 
 
 
-bot.run('NzE5MDE0OTY5NzMxMTg2NzU4.XtxQ3w.GLqVx15QmXsf9-EsUrSJdFMoKQk')
+bot.run(token)
