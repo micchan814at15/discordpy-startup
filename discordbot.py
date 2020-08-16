@@ -1,8 +1,7 @@
-import discord
 from discord.ext import commands
 import os
 import traceback
-
+#import discord
 token = os.environ['DISCORD_BOT_TOKEN']
 client = discord.Client()
 
