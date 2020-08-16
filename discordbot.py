@@ -2,15 +2,8 @@ from discord.ext import commands
 import os
 import traceback
 
-bot = commands.Bot(command_prefix='mdb!')
+bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
-
-
-@bot.event
-async def on_command_error(ctx, error):
-    orig_error = getattr(error, "original", error)
-    error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
-    await ctx.send(error_msg)
 
 
 @bot.command(name="こんにちは")
@@ -210,4 +203,5 @@ async def ping(ctx):
     await ctx.send('Pong! {0}'.format(round(bot.latency * 1000, 1)))
 
 
-bot.run(token)
+
+bot.run('NzE5MDE0OTY5NzMxMTg2NzU4.XtxQ3w.GLqVx15QmXsf9-EsUrSJdFMoKQk')
