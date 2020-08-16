@@ -3,6 +3,7 @@ import os
 import traceback
 
 token = os.environ['DISCORD_BOT_TOKEN']
+
 client = discord.Client()
 
 
@@ -35,7 +36,7 @@ async def on_message(message):
 
         new_w = await message.channel.create_webhook(name="global")
         client.global_list.append(new_w)
-        await message.channel.send("グローバルチャットのチャンネルに登録しました。")
+        await message.channel.send("登録処理が完了しました。この機能が停止または再起動するまでグローバルチャットをご利用いただけます。定期的に`!mglobal`の送信を実行してください。")
         return
 
     for webhook in client.global_list:
