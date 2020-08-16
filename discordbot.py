@@ -1,3 +1,4 @@
+import discord
 from discord.ext import commands
 import os
 import traceback
@@ -28,12 +29,12 @@ async def on_message(message):
 
     global_tmp = [w for w in await message.channel.webhooks() if w in client.global_list]
 
-    if message.content == "!mglobal":
+    if message.content == "!global":
         if global_tmp:
             await message.channel.send("既に登録されています。")
             return
 
-        new_w = await message.channel.create_webhook(name="mglobal")
+        new_w = await message.channel.create_webhook(name="global")
         client.global_list.append(new_w)
         await message.channel.send("グローバルチャットのチャンネルに登録しました。")
         return
