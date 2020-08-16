@@ -1,3 +1,11 @@
+import random
+from datetime import time
+from sys import prefix
+
+import client
+import discord
+from discord import message
+from discord.ext.commands import Bot
 from discord.ext import commands
 import os
 import traceback
@@ -207,7 +215,7 @@ Ping = bot.latency
 @bot.command(name='ping')
 async def ping(ctx):
     """Ping値を確認する"""
-    await ctx.send('Pong! {0}'.format(round(bot.latency * 100, 1)))
+    await ctx.send('Pong! {0}'.format(round(bot.latency * 1000, 1)))
 
 
 bot.run(token)
