@@ -1,7 +1,5 @@
 import random
 from datetime import time
-from sys import prefix
-
 import client
 import discord
 from discord import message
