@@ -5,6 +5,51 @@ import traceback
 bot = commands.Bot(command_prefix='mdb!')
 token = os.environ['DISCORD_BOT_TOKEN']
 
+bot.remove_command("help")
+
+@bot.command(name="help")
+async def support(ctx):
+    """Helpページを表示する"""
+    await ctx.send(f"```\n"
+                   f"Mermoの使い方ガイド\n"
+                   f"\n"
+                   f"このBotの基本コマンドプレフィックスは mdb! です。\n"
+                   f"荒らしコマンドプレフィックスは mdba! です。\n"
+                   f"また、このBotの一部機能は常時稼働ではないため、不定期的に一部の機能が使用できなくなる場合があります。\n"
+                   f"\n\n"
+                   f"Mermo Reactions\n"
+                   f"mdb!soudayo    そうだよ(便乗)と発言します。\n"
+                   f"mdb!ping    Ping値を確認します。\n"
+                   f"mdb!test    テスト発言をします。\n"
+                   f"\n"
+                   f"Mermo Picturebot\n"
+                   f"mdb!meabesonnani    安倍の「そんなに興奮しないでください」の画像を送信します。\n"
+                   f"mdb!meabeyurusanai    安倍政権への批判の画像を送信します。\n"
+                   f"mdb!metnokmikaeri    TNOKが見返った姿の画像を送信します。\n"
+                   f"mdb!merequest    Mermo Picturebotへの画像登録をリクエストをします。\n"
+                   f"\n"
+                   f"Mermo Functions\n"
+                   f"じゃんけん   Mermoとじゃんけんします。これを実行するとき、 mdb! は不要です。*1\n"
+                   f"mdb!tra [翻訳する文]    日本語⇔英語の翻訳をします。コマンドの後ろに翻訳する文を入力してください。*1\n"
+                   f"mdb!mrmgc    Mermoのグローバルチャットの利用方法などを表示します。\n"
+                   f"\n"
+                   f"Mermo Arashi\n"
+                   f"mdba!name50    送信者の名前を50回発言します。*1 *2\n"
+                   f"mdba!name100    送信者の名前を100回発言します。*1 *2\n"
+                   f"\n"
+                   f"Mermo Infomation\n"
+                   f"mdb!botdev    Mermoの開発者を見ます。\n"
+                   f"mdb!botver    Mermoのバージョンを確認します。\n"
+                   f"mdb!nextud    次のMermoのアップデートの予定の詳細を表示します。\n"
+                   f"mdb!pastud    過去のMermoのアップデートの詳細を表示します。\n"
+                   f"mdb!invite    Mermoをサーバーに招待するリンクを表示します。\n"
+                   f"mdb!joinserver    Mermoのサポートサーバーへの招待リンクを表示します。\n"
+                   f"\n\n"
+                   f"*1:この機能は常時稼働ではありません。\n"
+                   f"*2:この機能は荒らし禁止のサーバーまたはチャンネルで実行しないでください。\n"
+                   f"```\n")
+    print('helpのコマンドが実行されました。')
+
 @bot.command(name="こんにちは")
 async def hello(ctx):
     """こんにちはのあいさつをする"""
