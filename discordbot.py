@@ -187,7 +187,12 @@ async def nextud(ctx):
 async def pastud(ctx):
     """過去のアップデートを表示する"""
     await ctx.send(f"> **過去のアップデート**\n"
-                   f"> Ver.0.03.2[Beta](Latest)    Updated:2020/08/16 19:16(JST,GMT +09:00)\n"
+                   f"> Ver.0.03.5[Beta](Latest)    Updated2020/08/17 18:02(JST,GMT +09:00)\n"
+                   f"> アップデート内容/n"
+                   f"> 【変更】一部のMermoのコマンドのPythonコードをHerokuへデプロイしました。"
+                   f"> 【変更】Helpページをわかりやすくなるように編集しました。"
+                   f"\n"
+                   f"> Ver.0.03.2[Beta]    Updated:2020/08/16 19:16(JST,GMT +09:00)\n"
                    f"> アップデート内容\n"
                    f"> 【新規】Ping値が確認可能になりました。`mdb!ping`と送信すると、Ping値が確認ができます。"
                    f"\n"
@@ -206,7 +211,7 @@ async def pastud(ctx):
 @bot.command(name="botver")
 async def support(ctx):
     """このBotのバージョンを確認する"""
-    await ctx.send(f"> **Mermo**(micchandazo Bot)\n> **Ver.0.03.2[Beta]**\n> Updated 2020/08/16 19:16(JST,GMT +09:00)\n> Developer micchandazo")
+    await ctx.send(f"> **Mermo**(micchandazo Bot)\n> **Ver.0.03.5[Beta]**\n> Updated 2020/08/17 18:02(JST,GMT +09:00)\n> Developer micchandazo")
     print('verinfoのコマンドが実行されました。')
 
 @bot.command(name="soudayo")
