@@ -235,7 +235,7 @@ Ping = bot.latency
 @bot.command(name='ping')
 async def ping(ctx):
     """Ping値を確認する"""
-    await ctx.send('Pong! {0}'.format(round(bot.latency * 100, 1)))
+    await ctx.send('Pong! {0}'.format(round(bot.latency * 1000, 1)))
 
 @bot.command(name="merequest")
 async def hello(ctx):
