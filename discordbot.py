@@ -93,7 +93,7 @@ async def support(ctx):
                    f"\n\n"
                    f"*1:この機能は常時稼働ではありません。\n"
                    f"*2:この機能は荒らし禁止のサーバーまたはチャンネルで実行しないでください。\n"
-                   f"```\n"
+                   f"```\n")
     print('helのコマンドが実行されました。')
     
 #@bot.command(name="cmds")
