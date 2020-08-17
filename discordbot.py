@@ -176,10 +176,9 @@ async def support(ctx=None):
 async def nextud(ctx):
     """今後のアップデート予定を表示する"""
     await ctx.send(f"> **次のアップデート**\n"
-                   f"> Ver.0.03.5[Beta]　予定日時:2020/08/18(JST,GMT +09:00)\n> \n"
+                   f"> Ver.-.--.-[Beta]　予定日時:----/--/--(JST,GMT +09:00)\n> \n"
                    f"> アップデート内容\n"
-                   f"> BotのコマンドのPythonコードをHerokuへデプロイし、一部のBotコマンド系を常時稼働する予定です。\n"
-                   f"> Helpページをわかりやすくなるように更新する予定です。")
+                   f"")
     print('nextudのコマンドが実行されました。')
 
 
@@ -189,7 +188,7 @@ async def pastud(ctx):
     await ctx.send(f"> **過去のアップデート**\n"
                    f"> Ver.0.03.5[Beta](Latest)    Updated2020/08/17 18:02(JST,GMT +09:00)\n"
                    f"> アップデート内容/n"
-                   f"> 【変更】一部のMermoのコマンドのPythonコードをHerokuへデプロイしました。"
+                   f"> 【変更】一部のMermoのコマンドのPythonコードをHerokuへ稼働環境を移転しました。"
                    f"> 【変更】Helpページをわかりやすくなるように編集しました。"
                    f"\n"
                    f"> Ver.0.03.2[Beta]    Updated:2020/08/16 19:16(JST,GMT +09:00)\n"
