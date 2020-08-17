@@ -17,7 +17,7 @@ async def support(ctx):
                    f"荒らしコマンドプレフィックスは mdba! です。\n"
                    f"また、このBotの一部機能は常時稼働ではないため、不定期的に一部の機能が使用できなくなる場合があります。\n"
                    f"\n\n"
-                   f"Mermo Reactions\n"
+                   f"Mermo Remarks\n"
                    f"mdb!soudayo    そうだよ(便乗)と発言します。\n"
                    f"mdb!ping    Ping値を確認します。\n"
                    f"mdb!test    テスト発言をします。\n"
