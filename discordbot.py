@@ -45,6 +45,10 @@ async def support(ctx):
                    f"mdb!pastud    過去のMermoのアップデートの詳細を表示します。\n"
                    f"mdb!invite    Mermoをサーバーに招待するリンクを表示します。\n"
                    f"mdb!joinserver    Mermoのサポートサーバーへの招待リンクを表示します。\n"
+                   f"\n"
+                   f"Mermo suppport\n"
+                   f"mdb!spissue    機能停止などの問題が発生した場合の報告方法についてのサポートメッセージを送信します。\n"
+                   f"mdb!spbscode    Mermoのステータスについてのサポートメッセージを送信します。\n"
                    f"\n\n"
                    f"*1:この機能は常時稼働ではありません。\n"
                    f"*2:この機能は荒らし禁止のサーバーまたはチャンネルで実行しないでください。\n"
@@ -238,6 +242,28 @@ Ping = bot.latency
 async def ping(ctx):
     """Ping値を確認する"""
     await ctx.send('Pong! {0}'.format(round(bot.latency * 1000, 1)))
+    
+@bot.command(name="spissue")
+async def hello(ctx):
+    """こんにちはのあいさつをする"""
+    await ctx.send(f"> Mermo support - 機能が動作しないなどの問題が発生した場合\n\n"
+                   f"Mermoの機能の停止など問題が発生した場合はサポートサーバーに参加して報告するか、\n"
+                   f"`micchandazo#9669`が参加しているサーバーで報告するか、\n"
+                   f"`micchandazo#9669`までDMを報告を送信してください。")
+    print('こんにちはのコマンドが実行されました。')
+
+@bot.command(name="spbscode")
+async def hello(ctx):
+    """こんにちはのあいさつをする"""
+    await ctx.send(f"> Mermo support - プレイステータスにあるBot Status Codeについて\n\n"
+                   f"Mermoのステータスはプレイステータスで確認できます。\n"
+                   f"ステータスコードの最初のアルファベット2文字の意味は\n"
+                   f"`ER`がエラー\n"
+                   f"`MT`がメンテナンス\n"
+                   f"`ST`が機能停止\n"
+                   f"です。\n"
+                   f"詳しくはMermo公式HPを確認をしてください。: https://dcmermopj.jimdofree.com/status-codes/ ")
+    print('こんにちはのコマンドが実行されました。')
 
 @bot.command(name="merequest")
 async def hello(ctx):
