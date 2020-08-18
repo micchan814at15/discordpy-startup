@@ -39,8 +39,8 @@ async def support(ctx):
                    f"mdba!mentions100    送信者へ100回メンションします。*1 *2\n"
                    f"\n"
                    f"Mermo Member Management\n"
-                   f"mdb!kick [KICKするメンバーの名前]    メンバーのKICK処理を実行します。*1 *3\n"
-                   f"mdb!ban [BANするメンバーの名前]    メンバーのBAN処理を実行します。*1 *3\n"
+                   f"mdb!kick [KICKするメンバーの名前]    メンバーのKICK処理を実行します。*3\n"
+                   f"mdb!ban [BANするメンバーの名前]    メンバーのBAN処理を実行します。*3\n"
                    f"\n"
                    f"mdb!botdev    Mermoの開発者を見ます。\n"
                    f"mdb!botver    Mermoのバージョンを確認します。\n"
@@ -245,7 +245,7 @@ async def support(ctx):
     await ctx.send(f"> Mermo Global Chat Service(MGCS)\n> \n> MGCSを利用する前に次のURLにアクセスして、注意事項と利用方法をお読みください。\n> https://dcmermopj.jimdofree.com/mermo-global-chat/ \n> \n> Public Channelに参加する場合は、「mermo-gc」というチャンネルを作成してください。\n> \n> 「mermo-gc」のチャンネルで発言すると、導入しているすべてのサーバーに発言が表示されます(常時起動ではないため、一時的ご利用できない場合があります)。\n> \n> Private Global Channelを作成する場合は、以下のURLにアクセスしてください。\n> https://docs.google.com/forms/d/e/1FAIpQLSdDCekat2_KFEQapSuhcVShiFeg-iafsQ6uKnDJr6cIkO4kKg/viewform?usp=sf_link")
     print('mrmgcのコマンドが実行されました。')
 
- @bot.command(name='kick')
+@bot.command(name='kick')
 @commands.has_permissions (administrator=True)
 async def kick(ctx, member: discord.Member, *, reason=None):
     await ctx.send(f"{ctx.message.author.name}が{member.mention}のKICK処理を要求しました。ただいまKICK処理中です。お待ちください。")
