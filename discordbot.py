@@ -1,5 +1,4 @@
 from discord.ext import commands
-from discord.ext.commands import Bot
 import os
 import traceback
 
@@ -40,8 +39,8 @@ async def support(ctx):
                    f"mdba!mentions100    送信者へ100回メンションします。*1 *2\n"
                    f"\n"
                    f"Mermo Member Management\n"
-                   f"mdb!kick [KICKするメンバーの名前]    メンバーのKICK処理を実行します。*3\n"
-                   f"mdb!ban [BANするメンバーの名前]    メンバーのBAN処理を実行します。*3\n"
+                   f"mdb!kick [KICKするメンバーの名前]    メンバーのKICK処理を実行します。*1 *3\n"
+                   f"mdb!ban [BANするメンバーの名前]    メンバーのBAN処理を実行します。*1 *3\n"
                    f"\n"
                    f"mdb!botdev    Mermoの開発者を見ます。\n"
                    f"mdb!botver    Mermoのバージョンを確認します。\n"
