@@ -1,4 +1,3 @@
-import discord
 from discord.ext import commands
 import os
 import traceback
@@ -41,8 +40,8 @@ async def support(ctx):
                    f"mdba!mentions100    送信者へ100回メンションします。*1 *2\n"
                    f"\n"
                    f"Mermo Member Management\n"
-                   f"mdb!kick [KICKするメンバーの名前]    メンバーのKICK処理を実行します。*3\n"
-                   f"mdb!ban [BANするメンバーの名前]    メンバーのBAN処理を実行します。*3\n"
+                   f"mdb!kick [KICKするメンバーの名前]    メンバーのKICK処理を実行します。*1 *3\n"
+                   f"mdb!ban [BANするメンバーの名前]    メンバーのBAN処理を実行します。*1 *3\n"
                    f"\n"
                    f"mdb!botdev    Mermoの開発者を見ます。\n"
                    f"mdb!botver    Mermoのバージョンを確認します。\n"
@@ -103,7 +102,8 @@ async def goodnight(ctx):
     await ctx.send(f"{ctx.message.author.name}さん、おやすミミッキュいのちのたま")
     print('おやすみのコマンドが実行されました。')
 
-
+#----------!----------
+    
 @bot.command(name="botdev")
 async def hello(ctx):
     """Botのバージョンを確認する"""
@@ -265,25 +265,6 @@ async def support(ctx):
         f"> Mermo Global Chat Service(MGCS)\n> \n> MGCSを利用する前に次のURLにアクセスして、注意事項と利用方法をお読みください。\n> https://dcmermopj.jimdofree.com/mermo-global-chat/ \n> \n> Public Channelに参加する場合は、「mermo-gc」というチャンネルを作成してください。\n> \n> 「mermo-gc」のチャンネルで発言すると、導入しているすべてのサーバーに発言が表示されます(常時起動ではないため、一時的ご利用できない場合があります)。\n> \n> Private Global Channelを作成する場合は、以下のURLにアクセスしてください。\n> https://docs.google.com/forms/d/e/1FAIpQLSdDCekat2_KFEQapSuhcVShiFeg-iafsQ6uKnDJr6cIkO4kKg/viewform?usp=sf_link")
     print('mrmgcのコマンドが実行されました。')
 
-
-@bot.command(name='kick')
-@commands.has_permissions(administrator=True)
-async def kick(ctx, member: discord.Member, *, reason=None):
-    await ctx.send(f"{ctx.message.author.name}が{member.mention}のKICK処理を要求しました。ただいまKICK処理中です。お待ちください。")
-    await member.kick(reason=reason)
-    embed = discord.Embed(title=f'実行者:{ctx.author}', description=f"KICKの処理が完了しました:{member.mention}", color=0xfee101)
-    embed.add_field(name=f"KICK対象のユーザーID:{member.id}", value=f"Mermo処理ID:MK{id(ctx)}", inline=False)
-    await ctx.send(embed=embed)
-
-
-@bot.command(name='ban')
-@commands.has_permissions(administrator=True)
-async def ban(ctx, member: discord.Member, *, reason=None):
-    await ctx.send(f"{ctx.message.author.name}が{member.mention}のBAN処理を要求しました。ただいまBAN処理中です。お待ちください。")
-    await member.ban(reason=reason)
-    embed = discord.Embed(title=f'実行者:{ctx.author}', description=f"BANの処理が完了しました:{member.mention}", color=0xff0000)
-    embed.add_field(name=f"BAN対象のユーザーID:{member.id}", value=f"Mermo処理ID:MB{id(ctx)}", inline=False)
-    await ctx.send(embed=embed)
 
 
 Ping = bot.latency
