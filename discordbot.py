@@ -38,7 +38,10 @@ async def support(ctx):
                    f"mdba!name100    送信者の名前を100回発言します。*1 *2\n"
                    f"mdba!mentions100    送信者へ100回メンションします。*1 *2\n"
                    f"\n"
-                   f"Mermo Infomation\n"
+                   f"Mermo Member Management\n"
+                   f"mdb!kick [KICKするメンバーの名前]    メンバーのKICK処理を実行します。*3\n"
+                   f"mdb!ban [BANするメンバーの名前]    メンバーのBAN処理を実行します。*3\n"
+                   f"\n"
                    f"mdb!botdev    Mermoの開発者を見ます。\n"
                    f"mdb!botver    Mermoのバージョンを確認します。\n"
                    f"mdb!nextud    次のMermoのアップデートの予定の詳細を表示します。\n"
@@ -52,6 +55,7 @@ async def support(ctx):
                    f"\n\n"
                    f"*1:この機能は常時稼働ではありません。\n"
                    f"*2:この機能は荒らし禁止のサーバーまたはチャンネルで実行しないでください。\n"
+                   f"*3:この機能は管理者権限のあるユーザーのみ実行できます。このBotのロールを上位に上げなければこの機能は使用できない場合があります。"
                    f"```\n")
     print('helpのコマンドが実行されました。')
 
@@ -184,7 +188,13 @@ async def nextud(ctx):
 async def pastud(ctx):
     """過去のアップデートを表示する"""
     await ctx.send(f"> **過去のアップデート**\n"
-                   f"> Ver.0.03.5[Beta](Latest)    Updated2020/08/17 18:02(JST,GMT +09:00)\n"
+                   f"> Ver.0.04.0[Beta](Latest)    Updated:2020/08/19 03:57(JST,GMT +09:00)"
+                   f"> アップデート内容"
+                   f"> 【新規】KICKコマンドを追加しました。管理者権限があるユーザーのみ実行できます。"
+                   f"> 【新規】BANコマンドを追加しました。管理者権限があるユーザーのみ実行できます。"
+                   f"> 新しいコマンドについてはHelpページをご参照ください。"
+                   f"\n"
+                   f"> Ver.0.03.5[Beta]    Updated2020/08/17 18:02(JST,GMT +09:00)\n"
                    f"> アップデート内容/n"
                    f"> 【変更】一部のMermoのコマンドのPythonコードをHerokuへ稼働環境を移転しました。"
                    f"> 【変更】Helpページをわかりやすくなるように編集しました。"
@@ -208,7 +218,7 @@ async def pastud(ctx):
 @bot.command(name="botver")
 async def support(ctx):
     """このBotのバージョンを確認する"""
-    await ctx.send(f"> **Mermo**(micchandazo Bot)\n> **Ver.0.03.5[Beta]**\n> Updated 2020/08/17 18:02(JST,GMT +09:00)\n> Developer micchandazo")
+    await ctx.send(f"> **Mermo**(micchandazo Bot)\n> **Ver.0.04.0[Beta]**\n> Updated 2020/08/19 03:57(JST,GMT +09:00)\n> Developer micchandazo#9669")
     print('verinfoのコマンドが実行されました。')
 
 @bot.command(name="soudayo")
