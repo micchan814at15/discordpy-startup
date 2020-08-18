@@ -90,17 +90,10 @@ async def goodnight(ctx):
 @bot.command(name="botdev")
 async def hello(ctx):
     """Botのバージョンを確認する"""
-    await ctx.send(f"> このBotの開発者は、micchandazoだお\n> \n> Discord:`@micchandazo#9669`\n> Twitter @micchandazo( https://twitter.com/micchandazo )")
+    await ctx.send(f"> Mermoはmicchandazoが開発しています。\n> \n> Discord:`@micchandazo#9669`\n> Twitter @micchandazo( https://twitter.com/micchandazo )\n公式HP: https://dcmermopj.jimdofree.com/ ")
     print('botdevのコマンドが実行されました。')
 
-@bot.command(name="hel")
-async def support(ctx):
-    """移行されたコマンド"""
-    await ctx.send(f"> コマンド一覧のコマンドはmdb!cmdsに変更されました。今後コマンド一覧を表示する場合はmdb!cmdsと送信してください。")
-    print('helのコマンドが実行されました。')
 
-
-    
 #@bot.command(name="cmds")
 #async def help(ctx):
 #    """コマンド一覧を表示する"""
