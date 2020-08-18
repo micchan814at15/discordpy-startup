@@ -36,7 +36,7 @@ async def support(ctx):
                    f"Mermo Arashi\n"
                    f"mdba!name50    送信者の名前を50回発言します。*1 *2\n"
                    f"mdba!name100    送信者の名前を100回発言します。*1 *2\n"
-                   f"mdba!mentions100    送信者へ100回メンションします。"
+                   f"mdba!mentions100    送信者へ100回メンションします。*1 *2\n"
                    f"\n"
                    f"Mermo Infomation\n"
                    f"mdb!botdev    Mermoの開発者を見ます。\n"
