@@ -1,3 +1,4 @@
+import discord
 from discord.ext import commands
 import os
 import traceback
@@ -6,6 +7,7 @@ bot = commands.Bot(command_prefix='mdb!')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 bot.remove_command("help")
+
 
 @bot.command(name="help")
 async def support(ctx):
@@ -59,11 +61,13 @@ async def support(ctx):
                    f"```\n")
     print('helpのコマンドが実行されました。')
 
+
 @bot.command(name="こんにちは")
 async def hello(ctx):
     """こんにちはのあいさつをする"""
     await ctx.send(f"どうも、{ctx.message.author.name}さん！")
     print('こんにちはのコマンドが実行されました。')
+
 
 @bot.command(name="さようなら")
 async def goodbye(ctx):
@@ -71,11 +75,13 @@ async def goodbye(ctx):
     await ctx.send(f"{ctx.message.author.name}さん、さよなランクルス害悪駆除")
     print('さようならのコマンドが実行されました。')
 
+
 @bot.command(name="おはよう")
 async def goodmorning(ctx):
     """おはようのあいさつをする"""
     await ctx.send(f"{ctx.message.author.name}さん、おはよウザさMAXキセキサニーゴ")
     print('おはようのコマンドが実行されました。')
+
 
 @bot.command(name="よろしく")
 async def meetyou(ctx):
@@ -83,11 +89,13 @@ async def meetyou(ctx):
     await ctx.send(f"{ctx.message.author.name}さん、よろしクレベース耐久化物")
     print('よろしくのコマンドが実行されました。')
 
+
 @bot.command(name="こんばんは")
 async def noonnight(ctx):
     """こんばんはのあいさつをする"""
     await ctx.send(f"こんばんは、{ctx.message.author.name}さん！")
     print('こんばんはのコマンドが実行されました。')
+
 
 @bot.command(name="おやすみ")
 async def goodnight(ctx):
@@ -95,15 +103,17 @@ async def goodnight(ctx):
     await ctx.send(f"{ctx.message.author.name}さん、おやすミミッキュいのちのたま")
     print('おやすみのコマンドが実行されました。')
 
+
 @bot.command(name="botdev")
 async def hello(ctx):
     """Botのバージョンを確認する"""
-    await ctx.send(f"> Mermoはmicchandazoが開発しています。\n> \n> Discord:`@micchandazo#9669`\n> Twitter @micchandazo( https://twitter.com/micchandazo )\n公式HP: https://dcmermopj.jimdofree.com/ ")
+    await ctx.send(
+        f"> Mermoはmicchandazoが開発しています。\n> \n> Discord:`@micchandazo#9669`\n> Twitter @micchandazo( https://twitter.com/micchandazo )\n公式HP: https://dcmermopj.jimdofree.com/ ")
     print('botdevのコマンドが実行されました。')
 
 
-#@bot.command(name="cmds")
-#async def help(ctx):
+# @bot.command(name="cmds")
+# async def help(ctx):
 #    """コマンド一覧を表示する"""
 #    await ctx.send(f"> Mermoのコマンド一覧\n\n"
 #                   f"> `mdb!こんにちは`　Botがあいさつをします。\n"
@@ -128,13 +138,13 @@ async def hello(ctx):
 #                   f"> https://micchan814at15.wixsite.com/mermobotpj/commands")
 #    print('helのコマンドが実行されました。')
 
-#@bot.command(name="mehelp")
-#async def soudayo(ctx):
+# @bot.command(name="mehelp")
+# async def soudayo(ctx):
 #    """画像Botのヘルプページを表示"""
 #    print('soudayoのコマンドが実行されました。')
 
-#@bot.command(name="help2")
-#async def invite(ctx):
+# @bot.command(name="help2")
+# async def invite(ctx):
 #    """Mermoの機能を表示する(Helpの2ページ目)"""
 #    await ctx.send(f"```"
 #                   f" Mermoの機能\n> \n"
@@ -161,16 +171,19 @@ async def invite(ctx):
                    f"> *ただし、Botをサーバーに参加するには管理者権限が必要です。")
     print('inviteのコマンドが実行されました。')
 
+
 @bot.command(name="tra")
 async def nextud(ctx):
     """翻訳を実行(コマンドの後ろに原文を入力)"""
     await ctx.send(f"JPN→ENG,ENG→JPN Translate    Please wait...")
     print('traのコマンドが実行されました。Google Translateのサーバーに接続中です。')
 
+
 @bot.command(name="joinserver")
 async def support(ctx=None):
     """サポートサーバーに参加する"""
-    await ctx.send(f"> Mermoのサポートサーバーに参加する\n> micchandazo Botのサポートサーバーに参加するには、以下のURLにアクセスしてください。\nhttps://discord.gg/uKGSxSM")
+    await ctx.send(
+        f"> Mermoのサポートサーバーに参加する\n> micchandazo Botのサポートサーバーに参加するには、以下のURLにアクセスしてください。\nhttps://discord.gg/uKGSxSM")
     print('joinserverのコマンドが実行されました。')
 
 
@@ -215,11 +228,14 @@ async def pastud(ctx):
                    f"> mdb!mehelpでその機能のヘルプページを表示します。\n")
     print('pastudのコマンドが実行されました。')
 
+
 @bot.command(name="botver")
 async def support(ctx):
     """このBotのバージョンを確認する"""
-    await ctx.send(f"> **Mermo**(micchandazo Bot)\n> **Ver.0.04.0[Beta]**\n> Updated 2020/08/19 03:57(JST,GMT +09:00)\n> Developer micchandazo#9669")
+    await ctx.send(
+        f"> **Mermo**(micchandazo Bot)\n> **Ver.0.04.0[Beta]**\n> Updated 2020/08/19 03:57(JST,GMT +09:00)\n> Developer micchandazo#9669")
     print('verinfoのコマンドが実行されました。')
+
 
 @bot.command(name="soudayo")
 async def soudayo(ctx):
@@ -227,11 +243,13 @@ async def soudayo(ctx):
     await ctx.send(f"そうだよ(便乗)")
     print('soudayoのコマンドが実行されました。')
 
+
 @bot.command(name="test")
 async def test(ctx):
     """発信テストをする"""
     await ctx.send(f"> **発信テスト中**")
     print('testのコマンドが実行されました。')
+
 
 @bot.command(name="comreq")
 async def support(ctx):
@@ -239,37 +257,44 @@ async def support(ctx):
     await ctx.send(f"> **コマンドのリクエストですか？**\n> コマンドをリクエストするには、サポートサーバーまたはmicchandazo#9669までお送りください(発言系のみ)。")
     print('comreqのコマンドが実行されました。')
 
+
 @bot.command(name="mrmgc")
 async def support(ctx):
     """MGCSの利用方法を表示する"""
-    await ctx.send(f"> Mermo Global Chat Service(MGCS)\n> \n> MGCSを利用する前に次のURLにアクセスして、注意事項と利用方法をお読みください。\n> https://dcmermopj.jimdofree.com/mermo-global-chat/ \n> \n> Public Channelに参加する場合は、「mermo-gc」というチャンネルを作成してください。\n> \n> 「mermo-gc」のチャンネルで発言すると、導入しているすべてのサーバーに発言が表示されます(常時起動ではないため、一時的ご利用できない場合があります)。\n> \n> Private Global Channelを作成する場合は、以下のURLにアクセスしてください。\n> https://docs.google.com/forms/d/e/1FAIpQLSdDCekat2_KFEQapSuhcVShiFeg-iafsQ6uKnDJr6cIkO4kKg/viewform?usp=sf_link")
+    await ctx.send(
+        f"> Mermo Global Chat Service(MGCS)\n> \n> MGCSを利用する前に次のURLにアクセスして、注意事項と利用方法をお読みください。\n> https://dcmermopj.jimdofree.com/mermo-global-chat/ \n> \n> Public Channelに参加する場合は、「mermo-gc」というチャンネルを作成してください。\n> \n> 「mermo-gc」のチャンネルで発言すると、導入しているすべてのサーバーに発言が表示されます(常時起動ではないため、一時的ご利用できない場合があります)。\n> \n> Private Global Channelを作成する場合は、以下のURLにアクセスしてください。\n> https://docs.google.com/forms/d/e/1FAIpQLSdDCekat2_KFEQapSuhcVShiFeg-iafsQ6uKnDJr6cIkO4kKg/viewform?usp=sf_link")
     print('mrmgcのコマンドが実行されました。')
 
+
 @bot.command(name='kick')
-@commands.has_permissions (administrator=True)
+@commands.has_permissions(administrator=True)
 async def kick(ctx, member: discord.Member, *, reason=None):
     await ctx.send(f"{ctx.message.author.name}が{member.mention}のKICK処理を要求しました。ただいまKICK処理中です。お待ちください。")
-    await member.kick (reason=reason)
-    embed = discord.Embed (title=f'実行者:{ctx.author}', description=f"KICKの処理が完了しました:{member.mention}",color=0xfee101)
-    embed.add_field (name=f"KICK対象のユーザーID:{member.id}", value=f"Mermo処理ID:MK{id(ctx)}", inline=False)
-    await ctx.send (embed=embed)
+    await member.kick(reason=reason)
+    embed = discord.Embed(title=f'実行者:{ctx.author}', description=f"KICKの処理が完了しました:{member.mention}", color=0xfee101)
+    embed.add_field(name=f"KICK対象のユーザーID:{member.id}", value=f"Mermo処理ID:MK{id(ctx)}", inline=False)
+    await ctx.send(embed=embed)
 
-@bot.command (name='ban')
-@commands.has_permissions (administrator=True)
+
+@bot.command(name='ban')
+@commands.has_permissions(administrator=True)
 async def ban(ctx, member: discord.Member, *, reason=None):
     await ctx.send(f"{ctx.message.author.name}が{member.mention}のBAN処理を要求しました。ただいまBAN処理中です。お待ちください。")
     await member.ban(reason=reason)
-    embed=discord.Embed (title=f'実行者:{ctx.author}', description=f"BANの処理が完了しました:{member.mention}", color=0xff0000)
-    embed.add_field (name=f"BAN対象のユーザーID:{member.id}", value=f"Mermo処理ID:MB{id(ctx)}", inline=False)
-    await ctx.send (embed=embed) 
+    embed = discord.Embed(title=f'実行者:{ctx.author}', description=f"BANの処理が完了しました:{member.mention}", color=0xff0000)
+    embed.add_field(name=f"BAN対象のユーザーID:{member.id}", value=f"Mermo処理ID:MB{id(ctx)}", inline=False)
+    await ctx.send(embed=embed)
+
 
 Ping = bot.latency
+
 
 @bot.command(name='ping')
 async def ping(ctx):
     """Ping値を確認する"""
     await ctx.send('Pong! {0}'.format(round(bot.latency * 1000, 1)))
-    
+
+
 @bot.command(name="spissue")
 async def hello(ctx):
     """こんにちはのあいさつをする"""
@@ -278,6 +303,7 @@ async def hello(ctx):
                    f"`micchandazo#9669`が参加しているサーバーで報告するか、\n"
                    f"`micchandazo#9669`までDMを報告を送信してください。")
     print('こんにちはのコマンドが実行されました。')
+
 
 @bot.command(name="spbscode")
 async def hello(ctx):
@@ -292,6 +318,7 @@ async def hello(ctx):
                    f"詳しくはMermo公式HPを確認をしてください。: https://dcmermopj.jimdofree.com/status-codes/ ")
     print('こんにちはのコマンドが実行されました。')
 
+
 @bot.command(name="merequest")
 async def hello(ctx):
     """画像登録を申請する"""
@@ -300,11 +327,13 @@ async def hello(ctx):
                    f"> https://discord.gg/uKGSxSM")
     print('Ran request')
 
+
 @bot.command(name="meraboot01")
 async def hello(ctx):
     """ラビフットの画像を送信する"""
     await ctx.send(f"https://cdn.discordapp.com/attachments/719503000263196703/741810037906866226/image0.jpg")
     print('Ran raboot01.')
+
 
 @bot.command(name="metnokmikaeri")
 async def hello(ctx):
@@ -312,16 +341,20 @@ async def hello(ctx):
     await ctx.send(f"https://cdn.discordapp.com/attachments/712172035945529374/741461677056327792/image0.png")
     print('Ran tnokmikaeri.')
 
+
 @bot.command(name="meabesonnani")
 async def hello(ctx):
     """安倍の「そんなに興奮しないでください」の画像を送信する"""
     await ctx.send(f"https://cdn.discordapp.com/attachments/712172035945529374/741978273092993024/unknown.png")
     print('Ran abesonnani.')
 
+
 @bot.command(name="meabeyurusanai")
 async def hello(ctx):
     """安倍政権への批判の画像を送信する"""
-    await ctx.send(f"https://media.discordapp.net/attachments/712172035945529374/743003950323859506/9k.png?width=242&height=169")
+    await ctx.send(
+        f"https://media.discordapp.net/attachments/712172035945529374/743003950323859506/9k.png?width=242&height=169")
     print('Ran abeyurusanai.')
+
 
 bot.run(token)
