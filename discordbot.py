@@ -58,6 +58,12 @@ async def support(ctx):
                    f"```\n")
     print('helpのコマンドが実行されました。')
 
+@bot.command(name="helpbeta")
+async def hello(ctx):
+    embed = discord.Embed(title='Mermo Help page', color=0xFFFFFF)
+    embed.add_field(name='Please wait', value='ただいま作成中です')
+    embed.add_field(name='ENG', value='Checking...')
+    await ctx.send (embed=embed)
 
 @bot.command(name="こんにちは")
 async def hello(ctx):
