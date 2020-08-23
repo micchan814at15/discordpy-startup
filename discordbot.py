@@ -100,8 +100,9 @@ async def goodnight(ctx):
     await ctx.send(f"{ctx.message.author.name}さん、おやすミミッキュいのちのたま")
     print('おやすみのコマンドが実行されました。')
 
-#----------!----------
-    
+
+# ----------!----------
+
 @bot.command(name="botdev")
 async def hello(ctx):
     """Botのバージョンを確認する"""
@@ -268,7 +269,6 @@ async def support(ctx):
     print('mrmgcのコマンドが実行されました。')
 
 
-
 Ping = bot.latency
 
 
@@ -339,11 +339,12 @@ async def hello(ctx):
         f"https://media.discordapp.net/attachments/712172035945529374/743003950323859506/9k.png?width=242&height=169")
     print('Ran abeyurusanai.')
 
-    @bot.command(name="suppoet")
+@bot.command(name="suppoet")
 async def hello(ctx):
     """安倍政権への批判の画像を送信する"""
     await ctx.send(
         f"Mermoのサポートページはこちらです:https://sites.google.com/view/mdmbotsp/")
     print('Ran abeyurusanai.')
+
 
 bot.run(token)
