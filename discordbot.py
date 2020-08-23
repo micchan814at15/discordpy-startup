@@ -50,10 +50,7 @@ async def support(ctx):
                    f"mdb!pastud    過去のMermoのアップデートの詳細を表示します。\n"
                    f"mdb!invite    Mermoをサーバーに招待するリンクを表示します。\n"
                    f"mdb!joinserver    Mermoのサポートサーバーへの招待リンクを表示します。\n"
-                   f"\n"
-                   f"Mermo suppport\n"
-                   f"mdb!spissue    機能停止などの問題が発生した場合の報告方法についてのサポートメッセージを送信します。\n"
-                   f"mdb!spbscode    Mermoのステータスについてのサポートメッセージを送信します。\n"
+                   f"mdb!support    Mermo Supportの公式HPへのリンクを表示します。\n"
                    f"\n\n"
                    f"*1:この機能は常時稼働ではありません。\n"
                    f"*2:この機能は荒らし禁止のサーバーまたはチャンネルで実行しないでください。\n"
@@ -342,5 +339,11 @@ async def hello(ctx):
         f"https://media.discordapp.net/attachments/712172035945529374/743003950323859506/9k.png?width=242&height=169")
     print('Ran abeyurusanai.')
 
+    @bot.command(name="suppoet")
+async def hello(ctx):
+    """安倍政権への批判の画像を送信する"""
+    await ctx.send(
+        f"Mermoのサポートページはこちらです:https://sites.google.com/view/mdmbotsp/")
+    print('Ran abeyurusanai.')
 
 bot.run(token)
