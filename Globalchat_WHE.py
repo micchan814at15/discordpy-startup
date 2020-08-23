@@ -1,5 +1,8 @@
 import discord
+import os
+import traceback
 
+token = os.environ['DISCORD_BOT_TOKEN']
 client = discord.Client()
 
 
@@ -27,12 +30,12 @@ async def on_message(message):
 
     if message.content == "!mglobal":
         if global_tmp:
-            await message.channel.send("登録済みです。数十分後にもう一度`!mglobal`と送信してください。")
+            await message.channel.send("登録済みです。Mermoが再起動するまでこの設定は有効です。")
             return
 
         new_w = await message.channel.create_webhook(name="Mermo Globalchat")
         client.global_list.append(new_w)
-        await message.channel.send("登録処理が完了しました。この機能が停止または再起動するまでグローバルチャットをご利用いただけます。定期的に`!mglobal`の送信を実行してください。")
+        await message.channel.send("登録処理が完了しました。この機能が停止または再起動するまでグローバルチャットをご利用いただけます。送信ができていなかったら`!mglobal`の送信を実行してください。")
         return
 
     for webhook in client.global_list:
@@ -46,3 +49,4 @@ async def on_message(message):
                                avatar_url=message.author.avatar_url)
 
 
+client.run(token)
