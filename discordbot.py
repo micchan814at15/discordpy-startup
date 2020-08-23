@@ -371,7 +371,7 @@ async def kick(ctx, member: discord.Member, *, reason=None):
     embed = discord.Embed (title=f'実行者:{ctx.author}', description=f"KICKの処理が完了しました:{member.mention}",color=0xfee101)
     embed.add_field (name=f"KICK対象のユーザーID:{member.id}", value=f"Mermo処理ID:MK{id(ctx)}", inline=False)
     await ctx.send (embed=embed)
-
+    await ctx.send (f"Practitioner: {ctx.message.author.id} \nTarget person user: {member.id} \nProcess ID:MK{id(ctx)} ")
 
 
 
@@ -393,5 +393,6 @@ async def ban(ctx, member: discord.Member, *, reason=None):
     embed=discord.Embed (title=f'実行者:{ctx.author}', description=f"BANの処理が完了しました:{member.mention}", color=0xff0000)
     embed.add_field (name=f"BAN対象のユーザーID:{member.id}", value=f"Mermo処理ID:MB{id(ctx)}", inline=False)
     await ctx.send (embed=embed)
+    await ctx.send (f"Practitioner: {ctx.message.author.id} \nTarget person user: {member.id} \nProcess ID: MB{id(ctx)} ")
 
 bot.run(token)
