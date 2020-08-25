@@ -25,7 +25,7 @@ async def support(ctx):
                    f"mdb!soudayo    そうだよ(便乗)と発言します。\n"
                    f"mdb!ping    Ping値を確認します。\n"
                    f"mdb!test    テスト発言をします。\n"
-                   f"mdb!time    Mermoが現在の時刻を知らせます。\n"
+ #                  f"mdb!time    Mermoが現在の時刻を知らせます。\n"
                    f"\n"
                    f"Mermo Picturebot\n"
                    f"mdb!meabesonnani    安倍の「そんなに興奮しないでください」の画像を送信します。\n"
@@ -84,10 +84,10 @@ async def hello(ctx):
     print('こんにちはのコマンドが実行されました。')
 
 @bot.command(name="time")
-async def hello(ctx):
-    now = datetime.datetime.now()
-    await ctx.send(f"(。´・ω・)ん？現在の時刻？今、{now.year}年{now.month}月{now.date}日 {now.hour}時{now.minute}分{now.second}秒{now.microsecond}だよ")
-    print('こんにちはのコマンドが実行されました。')
+#async def hello(ctx):
+#    now = datetime.datetime.now()
+#    await ctx.send(f"(。´・ω・)ん？現在の時刻？今、{now.hour + }時{now.minute}分{now.second}秒{now.microsecond}だよ")
+#    print('こんにちはのコマンドが実行されました。')
 
 @bot.command(name="さようなら")
 async def goodbye(ctx):
@@ -223,11 +223,11 @@ async def nextud(ctx):
 async def pastud(ctx):
     """過去のアップデートを表示する"""
     await ctx.send(f"> **過去のアップデート**\n"
-                   f"> Ver.0.04.1[公開Beta](Latest)    Updated:2020/08/25 23:12(JST,GMT +09:00)"
-                   f"> アップデート内容"
-                   f"> mdb!timeと入力して送信すると、現在の時刻を知らせるようになりました。"
-                   f"\n"
-                   f"> Ver.0.04.0[公開Beta]    Updated:2020/08/23 14:35(JST,GMT +09:00)"
+#                   f"> Ver.0.04.1[公開Beta](Latest)    Updated:2020/08/25 23:12(JST,GMT +09:00)"
+#                   f"> アップデート内容"
+#                   f"> mdb!timeと入力して送信すると、現在の時刻を知らせるようになりました。"
+#                   f"\n"
+                   f"> Ver.0.04.0[公開Beta](Latest)    Updated:2020/08/23 14:35(JST,GMT +09:00)"
                    f"> アップデート内容"
                    f"> 他サービスへのMermoの共有を決定しました。そのため、今回のアップデートからBeta版から公開Beta版へ変わります。"
                    f"\n"
@@ -263,7 +263,7 @@ async def pastud(ctx):
 async def support(ctx):
     """このBotのバージョンを確認する"""
     await ctx.send(
-        f"> **Mermo**(micchandazo Bot)\n> **Ver.0.04.1[公開Beta]**\n> Updated 2020/08/25 23:12(JST,GMT +09:00)\n> Developer micchandazo#9669")
+        f"> **Mermo**(micchandazo Bot)\n> **Ver.0.04.0[公開Beta]**\n> Updated 2020/08/22 14:35(JST,GMT +09:00)\n> Developer micchandazo#9669")
     print('verinfoのコマンドが実行されました。')
 
 
