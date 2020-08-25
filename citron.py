@@ -19,6 +19,7 @@ from bs4 import BeautifulSoup
 import commands
 import settings
 
+token = os.environ['DISCORD_BOT_TOKEN']
 
 
 # -------------google drive 認証-------------------------------------------------
@@ -292,4 +293,4 @@ async def on_message(message):
 
 
 # Botの起動とDiscordサーバーへの接続
-client.run(TOKEN)
+client.run(token)
