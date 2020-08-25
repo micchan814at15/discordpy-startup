@@ -20,7 +20,12 @@ import commands
 import settings
 
 token = os.environ['DISCORD_BOT_TOKEN']
-
+DB = {
+    "host": "XXXX",
+    "user": "XXXX",
+    "pass": "XXXX",
+    "db": "XXXX"
+}
 
 # -------------google drive 認証-------------------------------------------------
 # If modifying these scopes, delete the file token.pickle.
@@ -51,9 +56,6 @@ if not creds or not creds.valid:
 service = build('drive', 'v3', credentials=creds)
 # --------------------------------------------------------------------------------
 
-
-# 自分のBotのアクセストークンに置き換えてください
-TOKEN = settings.TOKEN
 
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
@@ -236,7 +238,7 @@ async def on_message(message):
 
 
     # ex) /search 3 <keyword>、/search <keyword>
-    if message.content.startswith('/search'):
+    if message.content.startswith('mdb!search'):
         msg = message.content.split(" ")
         if msg[1].isnumeric():
             search_word = message.content.split(" ",2)[2]
