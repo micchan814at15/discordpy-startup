@@ -83,7 +83,7 @@ async def hello(ctx):
     await ctx.send(f"どうも、{ctx.message.author.name}さん！")
     print('こんにちはのコマンドが実行されました。')
 
-@bot.command(name="time")
+#@bot.command(name="time")
 #async def hello(ctx):
 #    now = datetime.datetime.now()
 #    await ctx.send(f"(。´・ω・)ん？現在の時刻？今、{now.hour + }時{now.minute}分{now.second}秒{now.microsecond}だよ")
