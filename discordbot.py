@@ -414,4 +414,12 @@ async def ban(ctx, member: discord.Member, *, reason=None):
     await ctx.send (embed=embed)
     await ctx.send (f"Command executor:{ctx.message.author.id}\nTarget person user:{member.id}\nProcess ID:MB{id(ctx)}")
 
+
+@bot.event
+async def on_command_error(ctx, error):
+    if isinstance(error, commands.errors.MissingPermissions): #エラーの内容を判別
+        await ctx.send("権限がありません")
+    else:
+        raise error
+    
 bot.run(token)
