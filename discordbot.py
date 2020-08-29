@@ -25,7 +25,7 @@ async def support(ctx):
                    f"mdb!soudayo    そうだよ(便乗)と発言します。\n"
                    f"mdb!ping    Ping値を確認します。\n"
                    f"mdb!test    テスト発言をします。\n"
- #                  f"mdb!time    Mermoが現在の時刻を知らせます。\n"
+                   f"現在の時刻    Mermoが現在の時刻を知らせます。これを実行するとき、mdb!は不要です。*1\n"
                    f"\n"
                    f"Mermo Picturebot\n"
                    f"mdb!meabesonnani    安倍の「そんなに興奮しないでください」の画像を送信します。\n"
