@@ -223,10 +223,10 @@ async def nextud(ctx):
 async def pastud(ctx):
     """過去のアップデートを表示する"""
     await ctx.send(f"> **過去のアップデート**\n"
-#                   f"> Ver.0.04.1[公開Beta](Latest)    Updated:2020/08/25 23:12(JST,GMT +09:00)"
-#                   f"> アップデート内容"
-#                   f"> mdb!timeと入力して送信すると、現在の時刻を知らせるようになりました。"
-#                   f"\n"
+                   f"> Ver.0.04.1[公開Beta](Latest)    Updated:2020/08/29 23:22(JST,GMT +09:00)"
+                   f"> アップデート内容"
+                   f"> 【追加】現在の時刻と入力して送信すると、現在の時刻を知らせるようになりました。"
+                   f"\n"
                    f"> Ver.0.04.0[公開Beta](Latest)    Updated:2020/08/23 14:35(JST,GMT +09:00)"
                    f"> アップデート内容"
                    f"> 他サービスへのMermoの共有を決定しました。そのため、今回のアップデートからBeta版から公開Beta版へ変わります。"
@@ -263,7 +263,7 @@ async def pastud(ctx):
 async def support(ctx):
     """このBotのバージョンを確認する"""
     await ctx.send(
-        f"> **Mermo**(micchandazo Bot)\n> **Ver.0.04.0[公開Beta]**\n> Updated 2020/08/22 14:35(JST,GMT +09:00)\n> Developer micchandazo#9669")
+        f"> **Mermo**(micchandazo Bot)\n> **Ver.0.04.1[公開Beta]**\n> Updated 2020/08/29 23:22(JST,GMT +09:00)\n> Developer micchandazo#9669")
     print('verinfoのコマンドが実行されました。')
 
 
