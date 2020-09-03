@@ -84,21 +84,19 @@ async def help01(ctx):
     embed1.add_field(name='mdb!ping', value='MermoとDiscordの接続のPing値を確認します',inline=False)
     embed1.add_field(name='mdb!test', value='Mermoのテスト送信を実行します',inline=False)
     embed1.add_field(name='------------------------------------------------------------', value='Mermoのメンバー管理',inline=False)
-    embed1.add_field(name='mdb!kick [キックするメンバーの名前またはユーザーIDまたはメンション]', value='Mermoがメンバーをキックします', inline=False)
-    embed1.add_field(name='mdb!ban [キックするメンバーの名前またはユーザーIDまたはメンション]', value='MermoがメンバーをBANします', inline=False)
+    embed1.add_field(name='mdb!kick [キックするメンバーの名前またはユーザーIDまたはメンション]', value='Mermoがメンバーをキックします*3', inline=False)
+    embed1.add_field(name='mdb!ban [キックするメンバーの名前またはユーザーIDまたはメンション]', value='MermoがメンバーをBANします*3', inline=False)
     embed1.add_field(name='------------------------------------------------------------', value='Mermo PictureBot',inline=False)
     embed1.add_field(name='mdb!me', value='Mermoが送信できる画像の説明とコマンドを表示します',inline=False)
     embed1.add_field(name='------------------------------------------------------------', value='Mermo Global Chat Service',inline=False)
     embed1.add_field(name='mdb!mrmgc', value='Mermoのグローバルチャット(Embed版)の利用方法について表示します',inline=False)
-    embed1.add_field(name='!mglobal', value='Mermoのグローバルチャット(Webhook版)の登録処理をします(グローバルチャットを行うチャンネルで実行してください)',inline=False)
-    embed1.add_field(name='------------------------------------------------------------', value='Mermo Helpページ',inline=False)
-    embed1.add_field(name='*マークの説明', value='*1:常時稼働の機能ではないため、一時的に停止する場合があります\n*2:荒らし禁止のサーバー・チャンネルでは実行しないでください\n*3:実行するには管理者権限が必要です')
-    await ctx.send (embed=embed1)
+    embed1.add_field(name='!mglobal', value='Mermoのグローバルチャット(Webhook版)の登録処理をします(グローバルチャットを行うチャンネルで実行してください)*1',inline=False)
+    embed1.add_field(name='------------------------------------------------------------', value='Mermo Helpページ',inline=False)    await ctx.send (embed=embed1)
     embed2 = discord.Embed(title='Mermo Help page - Page 2', color=0x0078d7)
     embed2.add_field(name='------------------------------------------------------------', value='Mermo荒らしコマンド',inline=False)
-    embed2.add_field(name='mdba!name50', value='実行者の名前を50回発言します', inline=False)
-    embed2.add_field(name='mdba!name100', value='実行者の名前を100回発言します', inline=False)
-    embed2.add_field(name='mdba!mentions100', value='実行者へ100回メンションします', inline=False)
+    embed2.add_field(name='mdba!name50', value='実行者の名前を50回発言します*1 *2', inline=False)
+    embed2.add_field(name='mdba!name100', value='実行者の名前を100回発言します*1 *2', inline=False)
+    embed2.add_field(name='mdba!mentions100', value='実行者へ100回メンションします*1 *2', inline=False)
     embed2.add_field(name='------------------------------------------------------------', value='Mermoの情報',inline=False)
     embed2.add_field(name='mdb!botver', value='Mermoのバージョンを確認します', inline=False)
     embed2.add_field(name='mdb!pastud', value='過去のアップデートを確認します', inline=False)
@@ -109,6 +107,14 @@ async def help01(ctx):
     embed2.add_field(name='*マークの説明',value='*1:常時稼働の機能ではないため、一時的に停止する場合があります\n*2:荒らし禁止のサーバー・チャンネルでは実行しないでください\n*3:実行するには管理者権限が必要です')
     await ctx.send(embed=embed2)
 
+@bot.command(name="boti")
+async def help01(ctx):
+    embed1 = discord.Embed(title='Mermoの情報', color=0xffffff)
+    embed1.add_field(name='Mermo開発者', value='micchandazo#9669 <@!482849264389586959>',inline=False)
+    embed1.add_field(name='開発者のTwitter',value='https://twitter.com/micchandazo',inline=False)
+    embed1.add_field(name='開発言語', value='Local:Python 3.8\nHeroku Python 3.8.2', inline=False)
+    embed1.add_field(name='稼働開始日時', value='2020/06/07 02:28:47 (JST,GMT +09:00)', inline=False)
+    await ctx.send (embed=embed1)
 
 @bot.command(name="helpbeta")
 async def hello(ctx):
@@ -259,51 +265,24 @@ async def nextud(ctx):
     print('nextudのコマンドが実行されました。')
 
 
+
 @bot.command(name="pastud")
 async def pastud(ctx):
     """過去のアップデートを表示する"""
     await ctx.send(f"> **過去のアップデート**\n"
-                   f"> Ver.0.04.1[公開Beta](Latest)    Updated:2020/08/29 23:22(JST,GMT +09:00)"
+                   f"\n"
+                   f"> Ver.0.04.5[公開Beta](Latest)    Updated:2020/09/03 22:05(JST,GMT +09:00)"
                    f"> アップデート内容"
-                   f"> 【追加】現在の時刻と入力して送信すると、現在の時刻を知らせるようになりました。"
-                   f"\n"
-                   f"> Ver.0.04.0[公開Beta](Latest)    Updated:2020/08/23 14:35(JST,GMT +09:00)"
-                   f"> アップデート内容"
-                   f"> 他サービスへのMermoの共有を決定しました。そのため、今回のアップデートからBeta版から公開Beta版へ変わります。"
-                   f"\n"
-                   f"> Ver.0.04.0[Beta]    Updated:2020/08/19 03:57(JST,GMT +09:00)"
-                   f"> アップデート内容"
-                   f"> 【新規】KICKコマンドを追加しました。管理者権限があるユーザーのみ実行できます。"
-                   f"> 【新規】BANコマンドを追加しました。管理者権限があるユーザーのみ実行できます。"
-                   f"> 新しいコマンドについてはHelpページをご参照ください。"
-                   f"\n"
-                   f"> Ver.0.03.5[Beta]    Updated2020/08/17 18:02(JST,GMT +09:00)\n"
-                   f"> アップデート内容/n"
-                   f"> 【変更】一部のMermoのコマンドのPythonコードをHerokuへ稼働環境を移転しました。"
-                   f"> 【変更】Helpページをわかりやすくなるように編集しました。"
-                   f"\n"
-                   f"> Ver.0.03.2[Beta]    Updated:2020/08/16 19:16(JST,GMT +09:00)\n"
-                   f"> アップデート内容\n"
-                   f"> 【新規】Ping値が確認可能になりました。`mdb!ping`と送信すると、Ping値が確認ができます。"
-                   f"\n"
-                   f"> Ver.0.03.1.K1[Beta][緊急アップデート]    Updated:2020/08/12 01:41(JST,GMT +09:00)\n"
-                   f"> アップデートされた内容:\n"
-                   f"> 荒らしコマンドのコマンドプレフィックスを変更しました。\n"
-                   f"> コマンドプレフィックスは`mdba!`です。\n"
-                   f"> 現在の荒らしコマンド一覧:`mdba!name50` `mdba!name100`\n"
-                   f"\n"
-                   f"> バージョン:0.03.1[Beta](Latest)   アップデート日時:2020/08/10 17:55(JST,GMT+09:00)\n"
-                   f"> アップデート内容\n"
-                   f"> コマンドで画像送信の機能を正式に公開しました。\n"
-                   f"> mdb!mehelpでその機能のヘルプページを表示します。\n")
+                   f"> 【変更】HelpページをEmbedへ変更しました。旧Helpページはmdb!oldhelpで確認できます。"
+                   f"> 【追加】Mermoの開発者、開発言語、稼働開始日時が確認できるようになりました。mdb!botiで確認可能です。"
+                   f"> 【変更】Mermo PictureBotのコマンド一覧はmdb!meで確認できるように変更しました。")
     print('pastudのコマンドが実行されました。')
-
-
+    
 @bot.command(name="botver")
 async def support(ctx):
     """このBotのバージョンを確認する"""
     await ctx.send(
-        f"> **Mermo**(micchandazo Bot)\n> **Ver.0.04.1[公開Beta]**\n> Updated 2020/08/29 23:22(JST,GMT +09:00)\n> Developer micchandazo#9669")
+        f"> **Mermo**(micchandazo Bot)\n> **Ver.0.04.5[公開Beta]**\n> Updated 2020/09/03 22:05(JST,GMT +09:00)\n> Developer micchandazo#9669")
     print('verinfoのコマンドが実行されました。')
 
 
