@@ -357,6 +357,7 @@ async def namemessage(ctx):
                    f"```mdb!meabesonnani    安倍の「そんなに興奮しないでください」の画像を送信する```"
                    f"```mdb!meabeyurusanai    安倍政権への批判画像を送信する```"
                    f"```mdb!metnokmikaeri    TNOKが見返った姿の画像を送信する```"
+                   f"```mdb!medakaranany    Dakarananyの画像を送信する```"
                    f"\n画像登録はmdb!merequestと送信して確認ください。")
     
 @bot.command(name="merequest")
@@ -395,7 +396,13 @@ async def hello(ctx):
     await ctx.send(f"https://micchandazo.chakin.com/mpmedia/meabeyurusanai.png")
     print('Ran abeyurusanai.')
 
-@bot.command(name="suppoet")
+@bot.command(name="medakaranany")
+async def hello(ctx):
+    """安倍政権への批判の画像を送信する"""
+    await ctx.send(f"https://micchandazo.chakin.com/mpmedia/medakaranany.png")
+    print('Ran abeyurusanai.')
+
+@bot.command(name="support")
 async def hello(ctx):
     """安倍政権への批判の画像を送信する"""
     await ctx.send(
