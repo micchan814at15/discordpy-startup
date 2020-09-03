@@ -11,7 +11,7 @@ token = os.environ['DISCORD_BOT_TOKEN']
 bot.remove_command("help")
 
 
-@bot.command(name="help")
+@bot.command(name="oldhelp")
 async def support(ctx):
     """Helpページを表示する"""
     await ctx.send(f"```\n"
@@ -70,7 +70,7 @@ async def support(ctx):
                    f"```\n")
     print('helpのコマンドが実行されました。')
 
-@bot.command(name="help1")
+@bot.command(name="help")
 async def help01(ctx):
     embed1 = discord.Embed(title='Mermo Help page - Page 1', color=0x0078d7)
     embed1.add_field(name='このBotについて', value='このBotの基本コマンドプレフィックスは`mdb!`です。\n荒らしコマンドプレフィックスは`mdba!`です。\nこのBotの一部機能は常時稼働ではないため、一部の機能が一時的に停止する場合があります。',inline=False)
