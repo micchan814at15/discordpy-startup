@@ -72,7 +72,7 @@ async def support(ctx):
 
 @bot.command(name="help1")
 async def help01(ctx):
-    embed = discord.Embed(title='Mermo Help page', color=embed_color)
+    embed = discord.Embed(title='Mermo Help page', color=0x0078d7)
     embed.add_field(name='このBotについて', value='このBotの基本コマンドプレフィックスは`mdb!`です。\n荒らしコマンドプレフィックスは`mdba!`です。\nこのBotの一部機能は常時稼働ではないため、一部の機能が一時的に停止する場合があります。',inline=False)
     embed.add_field(name='------------------------------------------------------------', value='Mermoと楽しむ',inline=False)
     embed.add_field(name='じゃんけん', value='Mermoとじゃんけんをします(mdb!は不要です)*1',inline=False)
