@@ -332,7 +332,7 @@ async def hello(ctx):
 @bot.command(name="me")
 async def namemessage(ctx):
     await ctx.send(f"Mermo PictureBotのコマンド一覧"
-                   f"```mdb!meabesonnani    安倍の「そんなに興奮しないでください」の画像を送信する```\n"
+                   f"```mdb!meabesonnani    安倍の「そんなに興奮しないでください」の画像を送信する```"
                    f"```mdb!meabeyurusanai    安倍政権への批判画像を送信する```"
                    f"```mdb!tnokmikaeri    TNOKが見返った姿の画像を送信する```"
                    f"\n画像登録はmdb!merequestと送信して確認ください。")
