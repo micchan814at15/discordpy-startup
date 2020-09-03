@@ -329,6 +329,14 @@ async def hello(ctx):
     print('こんにちはのコマンドが実行されました。')
 
 
+@bot.command(name="me")
+async def namemessage(ctx):
+    await ctx.send(f"Mermo PictureBotのコマンド一覧"
+                   f"```mdb!meabesonnani    安倍の「そんなに興奮しないでください」の画像を送信する```\n"
+                   f"```mdb!meabeyurusanai    安倍政権への批判画像を送信する```\n"
+                   f"```mdb!tnokmikaeri    TNOKが見返った姿の画像を送信する```"
+                   f"画像登録はmdb!merequestと送信して確認ください。")
+    
 @bot.command(name="merequest")
 async def hello(ctx):
     """画像登録を申請する"""
@@ -348,22 +356,21 @@ async def hello(ctx):
 @bot.command(name="metnokmikaeri")
 async def hello(ctx):
     """TNOKが見返ったの画像を送信する"""
-    await ctx.send(f"https://cdn.discordapp.com/attachments/712172035945529374/741461677056327792/image0.png")
+    await ctx.send(f"https://micchandazo.chakin.com/mpmedia/metnokmikaeri.png")
     print('Ran tnokmikaeri.')
 
 
 @bot.command(name="meabesonnani")
 async def hello(ctx):
     """安倍の「そんなに興奮しないでください」の画像を送信する"""
-    await ctx.send(f"https://cdn.discordapp.com/attachments/712172035945529374/741978273092993024/unknown.png")
+    await ctx.send(f"https://micchandazo.chakin.com/mpmedia/meabesonnani.png")
     print('Ran abesonnani.')
 
 
 @bot.command(name="meabeyurusanai")
 async def hello(ctx):
     """安倍政権への批判の画像を送信する"""
-    await ctx.send(
-        f"https://media.discordapp.net/attachments/712172035945529374/743003950323859506/9k.png?width=242&height=169")
+    await ctx.send(f"https://micchandazo.chakin.com/mpmedia/meabeyurusanai.png")
     print('Ran abeyurusanai.')
 
 @bot.command(name="suppoet")
