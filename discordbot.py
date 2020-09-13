@@ -17,6 +17,8 @@ async def help01(ctx):
     embed1.add_field(name='このBotについて', value='このBotの基本コマンドプレフィックスは`mdb!`です。\n荒らしコマンドプレフィックスは`mdba!`です。\nこのBotの一部機能は常時稼働ではないため、一部の機能が一時的に停止する場合があります。',inline=False)
     embed1.add_field(name='------------------------------------------------------------', value='Mermoと楽しむ',inline=False)
     embed1.add_field(name='じゃんけん', value='Mermoとじゃんけんをします(mdb!は不要です)*1',inline=False)
+    embed1.add_field(name='mdb!roulette', value="SafeかOutかを抽選します*1", inline=False)
+    embed1.add_field(name='おみくじ', value="おみくじをします*1", inline=False)
     embed1.add_field(name='mdb!soudayo', value='そうだよ(便乗)と発言します',inline=False)
     embed1.add_field(name='------------------------------------------------------------', value='Mermoの便利ツール',inline=False)
     embed1.add_field(name='mdb!tra [翻訳する文]', value='日本語⇔英語の翻訳をします',inline=False)
@@ -273,8 +275,12 @@ async def nextud(ctx):
 async def pastud(ctx):
     """過去のアップデートを表示する"""
     await ctx.send(f"> **過去のアップデート**\n"
+                   f"```Ver.0.04.6[公開Beta](Latest)    Updated:2020/09/03 20:45(JST,GMT +09:00)"
+                   f"アップデート内容"
+                   f"【追加】SafeかOutか抽選をするルーレット機能を追加しました。mdb!rouletteで実行できます。"
+                   f"【追加】おみくじ機能を追加しました。おみくじと送信することで実行できます。```"
                    f"\n"
-                   f"> Ver.0.04.5[公開Beta](Latest)    Updated:2020/09/03 22:05(JST,GMT +09:00)"
+                   f"> Ver.0.04.5[公開Beta]    Updated:2020/09/03 22:05(JST,GMT +09:00)"
                    f"> アップデート内容"
                    f"> 【変更】HelpページをEmbedへ変更しました。旧Helpページはmdb!oldhelpで確認できます。"
                    f"> 【追加】Mermoの開発者、開発言語、稼働開始日時が確認できるようになりました。mdb!botiで確認可能です。"
@@ -285,7 +291,7 @@ async def pastud(ctx):
 async def support(ctx):
     """このBotのバージョンを確認する"""
     await ctx.send(
-        f"> **Mermo**(micchandazo Bot)\n> **Ver.0.04.5[公開Beta]**\n> Updated 2020/09/03 22:05(JST,GMT +09:00)\n> Developer micchandazo#9669")
+        f"> **Mermo**(micchandazo Bot)\n> **Ver.0.04.6[公開Beta]**\n> Updated 2020/09/13 20:45(JST,GMT +09:00)\n> Developer micchandazo#9669")
     print('verinfoのコマンドが実行されました。')
 
 
